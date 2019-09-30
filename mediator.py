@@ -1,8 +1,5 @@
 class Mediator:
-    """
-    Implement cooperative behavior by coordinating Colleague objects.
-    Know and maintains its colleagues.
-    """
+
 
     def __init__(self):
         self.elements = {}
@@ -24,11 +21,6 @@ class Mediator:
 
 
 class Element:
-    """
-    Know its Mediator object.
-    Communicate with its mediator whenever it would have otherwise
-    communicated with another colleague.
-    """
 
     def __init__(self, mediator, guid, taskid):
         self.mediator = mediator
@@ -39,12 +31,6 @@ class Element:
         print("element guid: ", self.guid)
 
 class Task:
-    """
-    Know its Mediator object.
-    Communicate with its mediator whenever it would have otherwise
-    communicated with another colleague.
-    """
-
     def __init__(self, mediator, taskid, guid):
         self.mediator = mediator
         self.taskid = taskid
